@@ -1,0 +1,436 @@
+<html lang=“en-US”>
+    <head>
+        <title> Clover Reels </title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nwak Juliet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *  {
+box-sizing: border-box;
+}
+header {
+        text-align: center; 
+        color: rgba(91, 194, 144);
+        padding: 200px;
+        font-size: 2.87em;
+        font-family: georgia;
+}
+            .img1{
+                margin-right: 5px;
+
+            }
+            h1 {
+                font-family: verdana;
+            font-size: 10vm;
+                    }
+            p {
+                color: white;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 5vm;
+                padding: 12pt;
+            }
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+                border: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            a:visited{
+                color: rgb(0, 48, 36);
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: rgba(91, 194, 144);
+                background-color: transparent;
+                text-decoration: underline;
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            a:active {
+                background-color: transparent;
+                text-decoration: none;
+                box-shadow: none;
+            }
+            a:link, a:visited {
+                background-color: transparent;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover, a:active {
+                background-color: transparent;
+            }
+   ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: transparent;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color:rgb(91, 194, 144);
+    }
+    .button:link {
+        width: 150px;
+        margin: auto;
+        overflow: hidden;
+        background-color: rgb(0, 48, 36);
+        color: white;
+        margin-left: 100px;
+
+    }
+    .button:hover {
+        background-color: rgb(91, 194, 144);
+    }
+    
+    .button1:link{
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        margin-left: 1000px;
+     
+    }
+    .menu-items {
+        background-color: rgba(59, 58, 58, 0.7);
+        padding: 10px 0px;
+    }
+    .menu-items ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        font-size: 0.8em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(14, 13, 13, 0.7);
+        padding: 2px 0px;
+
+    }
+    .menu-items ul li {
+        margin: 0 15px;
+    }
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        }
+        #topnav {
+            overflow: hidden;
+            background-color: black;
+        }
+        .topnav a{
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 2px 0px;
+            text-decoration: none;
+            font-size: 1.85em;
+        }
+        .active {
+            background-color: rgb(91, 194, 144);
+            color:white;
+        }
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 0.85em;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:rgb(0, 48, 36);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 9px 6px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .menu-items a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(91, 194, 144);
+            color: white;
+        }
+        .dropdown-content a:hover {
+            background-color:rgb(91, 194, 144);
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media screen and (max-width: 600px) {
+        .menu-items a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+        }
+        .menu-items a.icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .menu-items {
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+            #menu-close {
+                display: none;
+            }
+        }
+        @media screen and (max-width:600px){
+            .menu-items.responsive .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .menu-items.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+            }
+            .menu-items.responsive .dropdrown {float: none;}
+            .menu-items.responsive .dropdown-content {
+                position: absolute;
+            }
+            .menu-items.responsive .dropdown .dropbtn{
+                display: block;
+                width: 100%;
+                text-align: left;
+            
+
+        }
+        #menu-items.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(9)
+        }
+        .menu-items {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.9s ease, transform 0.9s ease;
+            transform: translateY(-100%);
+        }
+    }
+        }
+        </style>
+       
+        <span style="width:300px; margin:auto; font-family: georgia;" class="menu-items" id="menu-items"> <ul>
+            <!--<li> <a href="/Users/nwakwokejuliet/Downloads/Cloverbootstrap.html"> Home </a></li>
+            <li><a href="novels" target="blank"> Novels </a></li>
+            <li><a href="video" target="blank"> Videos </a></li>
+            <li><a href="shorts" target="_blank"> Shorts </a></li>
+            <li><a href="audiobook" target="_blank"> Audiobooks </a></li>
+            <li><a href="#shortstories" target="_blank"> Short Stories </a></li>
+            <li><a href="#tutorial" target="_blank"> Tutorial </a> </li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> About </a> </li>-->
+            <li><a href="/Users/nwakwokejuliet/Downloads/Signup.html"> Create </a> </li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/login.html" target="_blank"> Log in </a></li>
+        </ul> 
+    </span>
+        <a href="javascript:void(0);" style="font-size: 0.8em;" class="icon" id="menu-close" onclick="myFunction4()"> &#9776; </a>
+
+        <script>
+        function myFunction4() { 
+            var x =
+            document.getElementById("menu-items");
+            if (x.className === "menu-items"){
+                x.className += "responsive";
+            } else {
+                x.className = "menu-items";
+            }
+        }
+    </script>
+
+<script>
+    function toggleMenuIconVisibility () {
+        const menuIcon = document.querySelector('#menu-close');
+        if (window.innerWidth > 768) {
+            menuIcon.style.display = 'none';
+        }
+        else {
+            menuIcon.style.display = 'inherit';
+        }
+    }
+    window.addEventListener('load', toggleMenuIconVisibility);
+    window.addEventListener('resize', toggleMenuIconVisibility);
+    </script>
+
+    <script>
+        const hamburgerBtn = document.getElementById ('menu-close');
+        const menuContent = document.getElementsByClassName('menu-items');
+
+        hamburgerBtn.addEventListener('click', () => {
+            menuContent.classList.toggle('active');
+        })
+    </script>
+
+<span style="margin:auto;">
+<img src="/Users/nwakwokejuliet/Downloads/IMG_3232.PNG" alt="logo" style="max-width: 70px; max-height:70px;">
+    <!--<a href="#Create" target="_blank" class="button1"> Create </a> 
+    <a href="#login" target="_blank" class="button2"> Log in </a> -->
+    </span>
+    
+</head>
+<body class="w3-container" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 100%; color: white; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Users/nwakwokejuliet/Downloads/IMG_3234.JPG); background-repeat: no-repeat; background-size: cover;background-attachment:scroll;">
+
+<header><h1 id="CloverReels" style="font-size: 1.5em; margin-left: -60px;"> Clover Reels</h1></header>
+        
+    <div class=w3-row-padding>  
+    <div class="w3-third" id="List1">
+        <h2 style="text-align: center; font-family: georgia;">Explore the novels</h2>
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+            <img src="/Users/nwakwokejuliet/Downloads/IMG_3230.WEBP" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+            <p style="text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+            <a href="/Users/nwakwokejuliet/Downloads/Writeups.html" target="_blank" class="button" style="color: white;"> Read </a>
+            <br>
+            <br>
+            <br>
+            <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+            drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+        She is faced with conflicts, fears and her trueself.</p>
+        <a href="#everythingwasunreal" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+            earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+        and focusing on her heartfelt mission.</p>
+        <br>
+        <a href="#angeloftheskies" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="w3-third" id="List1">
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+            <img src="/Users/nwakwokejuliet/Downloads/photo-1544365558-35aa4afcf11f.webp" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+            <br>
+        <a href="#theraidofmankind" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+            <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+            drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+        She is faced with conflicts, fears and her trueself.</p>
+        <br>
+        <a href="#everythingwasunreal" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+        
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+            earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+        and focusing on her heartfelt mission.</p>
+        <br>
+        <a href="#angeloftheskies" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+        </div>
+        <div class="w3-third" id="List1">
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+            <img src="/Users/nwakwokejuliet/Downloads/photo-1544365558-35aa4afcf11f.webp" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+            <br>
+        <a href="#raidofmankind" target="_blank" class="button" style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+            <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+            <p style="text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+            drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+        She is faced with conflicts, fears and her trueself.</p>
+        <br>
+        <a href="#everythingwasunreal" target="_blank" class="button"; style="color: white"> Read </a>
+        <br>
+        <br>
+        <br>
+        <p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+            <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+            earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+        and focusing on her heartfelt mission.</p>
+        <br>
+        <a href="#angeloftheskies" target="_blank" class="button"; style="color: white;"> Read </a>
+        <br>
+        <br>
+        <br>
+        </div>
+        </div>
+        <br>
+        <br>
+        <span style="width:100px; margin:auto;" class="w3-container"> <ul>
+            <li> <a href="#List1"> 1 </a></li>
+            <li><a href="novels" target="blank"> 2 </a></li>
+            <li><a href="media" target="blank"> 3 </a></li>
+            <li><a href="shorts" target="_blank"> 4 </a></li>
+            <li><a href="recommendations" target="_blank"> 5 </a></li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> 6 </a> </li>
+            <li><a href="#about" target="_blank"> 7 </a></li>
+            <li><a href="#shortstories" target="_blank"> 8 </a></li>
+            <li><a href="#tutorial" target="_blank"> 9 </a> </li>
+            <li><a href="#Create" target="_blank"> 10 </a> </li>
+            <li><a href="#login" target="_blank"> 11 </a></li>
+            <li> <a href="#List1"> 12 </a></li>
+            <li><a href="novels" target="blank"> 13 </a></li>
+            <li><a href="media" target="blank"> 14 </a></li>
+            <li><a href="shorts" target="_blank"> 15 </a></li>
+            <li><a href="recommendations" target="_blank"> 16 </a></li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> 17 </a> </li>
+        </ul> 
+        </span>

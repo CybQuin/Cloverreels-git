@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang=“en-US”>
+    <head>
+        <title> Clover Reels </title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, Javascript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nwak Juliet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    *  {
+box-sizing: border-box;
+}
+header {
+        text-align: center; 
+        color: rgba(91, 194, 144);
+        padding: 200px;
+        font-size: 1.87em;
+        font-family: georgia;
+}
+#background-images img{
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+}
+.gradient {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    background-image: linear-gradient(to top, black, transparent);
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+#background-images img.active {
+    opacity: 1;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+#container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+address {
+    font-size: 0.65em;
+    text-align: center;
+    border: 0.5px solid rgb(91, 194, 144);
+    margin: 10px;
+}
+hr{
+    border: 3px;
+}
+            .img1{
+                margin-right: 5px;
+
+            }
+            h1 {
+                font-family: verdana;
+            font-size: 10vm;
+                    }
+            p {
+                color: white;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 5vm;
+                padding: 12pt;
+            }
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+                border: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            a:visited{
+                color: rgb(0, 48, 36);
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: rgba(91, 194, 144);
+                background-color: transparent;
+                text-decoration: underline;
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            a:active {
+                color: yellow;
+                background-color: rgb(77, 158, 119);
+                text-decoration: underline;
+            }
+            a:link, a:visited {
+                background-color: transparent;
+                color: white;
+                padding: 15px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover, a:active {
+                background-color: rgb(91, 194, 144);
+            }
+   ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: transparent;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    li a:hover {
+        background-color:rgb(77, 158, 119);
+    }
+    .button:link {
+        width: 150px;
+        margin: auto;
+        overflow: hidden;
+        background-color: rgb(0, 48, 36);
+        color: white;
+        margin-left: 100px;
+        border: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+    }
+    .button:hover {
+        background-color: rgb(91, 194, 144);
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .button1:link{
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+        margin-left: 1000px;
+     
+    }
+    .menu-items {
+        background-color: rgba(59, 58, 58, 0.7);
+        padding: 10px 0px;
+    }
+    .menu-items ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        font-size: 0.8em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(14, 13, 13, 0.7);
+        padding: 2px 0px;
+
+    }
+    .menu-items ul li {
+        margin: 0 15px;
+    }
+    .menu-items ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        }
+        #topnav {
+            overflow: hidden;
+            background-color: black;
+        }
+        .topnav a{
+            float: right;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 2px 0px;
+            text-decoration: none;
+            font-size: 1.85em;
+        }
+        .active {
+            background-color: rgb(91, 194, 144);
+            color:white;
+        }
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 0.85em;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:rgb(0, 48, 36);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 9px 6px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .menu-items a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(91, 194, 144);
+            color: white;
+        }
+        .dropdown-content a:hover {
+            background-color:rgb(91, 194, 144);
+            color: white;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media screen and (max-width: 600px) {
+        .menu-items a:not(:first-child), .dropdown .dropbtn {
+            display: none;
+        }
+        .menu-items a.icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .menu-items {
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+            #menu-close {
+                display: none;
+            }
+        }
+        @media screen and (max-width:600px){
+            .menu-items.responsive .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .menu-items.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+            }
+            .menu-items.responsive .dropdrown {float: none;}
+            .menu-items.responsive .dropdown-content {
+                position: absolute;
+            }
+            .menu-items.responsive .dropdown .dropbtn{
+                display: block;
+                width: 100%;
+                text-align: left;
+            
+        }
+        #menu-items.active {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(9)
+        }
+        .menu-items {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.9s ease, transform 0.9s ease;
+            transform: translateY(-100%);
+        }
+        header {
+            font-size: 1.5em;
+          text-align: center;
+            margin-top: -100px;
+        }
+    }
+}
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+    /* Add a background color when the inputs get focus */
+    input[type=text] focus,
+    input[type=password] focus{
+        background-color: #ddd;
+        outline: none;
+    }
+    /* Set style for all buttons */
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+    button:hover{
+        opacity: 1;
+    }
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+    /*Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /* Add padding to container elements */
+    .container {
+        padding: 16px;
+    }
+    /* The Modal Background */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+        padding-top: 50px;
+    }
+    /* Modal Content Box */
+    .modal-content {
+        background-color: #ddd;
+        margin: 5% auto 15% auto;
+        border: 1px solid rgb(91, 194, 144);
+        width: 60%;
+    }
+    hr{
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+    .close{
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        font-size: 40px;
+        font-weight: bold;
+        color:#f1f1f1;
+    }
+    .close:hover, .close:focus {
+        color: rgb(0, 48, 36);
+        cursor: pointer;
+    }
+    .clearfix::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    @media screen and (max-width:300px) {
+        .cancelbtn, .signupbtn {
+            width: 100%;
+        }
+        }
+        </style>
+          <div id="background-images">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_3231 2.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 1">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_3137.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 2">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_3187.JPG" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 3">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2548.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 4">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2607.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 5">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2661.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 6">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2533.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 7">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2773.WEBP" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 8">
+            <img srcset="/Users/nwakwokejuliet/Downloads/IMG_2199.PNG" sizes="(max-width: 600px) 100vw, 50vw" alt="Image 9">
+        </div>
+        <div id="container">
+        <div class="gradient">
+
+        </div>
+       
+        <span style="width:300px; margin:auto; font-family: georgia;" class="menu-items" id="menu-items"> <ul>
+            <!--<li> <a href="/Users/nwakwokejuliet/Downloads/Cloverbootstrap.html"> Home </a></li>
+            <li><a href="novels" target="blank"> Novels </a></li>
+            <li><a href="video" target="blank"> Videos </a></li>
+            <li><a href="shorts" target="_blank"> Shorts </a></li>
+            <li><a href="audiobook" target="_blank"> Audiobooks </a></li>
+            <li><a href="#shortstories" target="_blank"> Short Stories </a></li>
+            <li><a href="#tutorial" target="_blank"> Tutorial </a> </li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> About </a> </li>-->
+            <li><a href="/Users/nwakwokejuliet/Downloads/Signup.html"> Create </a> </li>
+            <li><a href="/Users/nwakwokejuliet/Downloads/login.html" target="_blank"> Log in </a></li>
+        </ul> 
+    </span>
+        <a href="javascript:void(0);" style="font-size: 0.8em;" class="icon" id="menu-close" onclick="myFunction4()"> &#9776; </a>
+  
+   
+
+    <!--<div class="topnav" id="myTopnav">
+        <a href="#home"> Home </a>
+        <a href="novels"> Novels </a>
+        <a href="video"> Videos </a>
+        <a href="shorts"> Shorts </a>
+        <a href="audiobooks"> Audiobooks </a>
+        <a href="shortstories"> Short Stories</a>
+        <a href="tutorial"> Tutorial </a>
+        <a href="about"> About </a>
+        <a href="create"> Create </a>
+        <a href="login"> Log In </a>-->
+    
+    <script>
+        function myFunction4() { 
+            var x =
+            document.getElementById("menu-items");
+            if (x.className === "menu-items"){
+                x.className += "responsive";
+            } else {
+                x.className = "menu-items";
+            }
+        }
+    </script>
+
+    <script>
+        function toggleMenuIconVisibility () {
+            const menuIcon = document.querySelector('#menu-close');
+            if (window.innerWidth > 768) {
+                menuIcon.style.display = 'none';
+            }
+            else {
+                menuIcon.style.display = 'inherit';
+            }
+        }
+        window.addEventListener('load', toggleMenuIconVisibility);
+        window.addEventListener('resize', toggleMenuIconVisibility);
+        </script>
+
+        <script>
+            const hamburgerBtn = document.getElementById ('menu-close');
+            const menuContent = document.getElementsByClassName('menu-items');
+
+            hamburgerBtn.addEventListener('click', () => {
+                menuContent.classList.toggle('active');
+            })
+        </script>
+       <script>
+            const images = document.querySelectorAll('#background-images img')
+            let currentImage = 0;
+
+            function showNextImage () {
+                images[currentImage].style.display = 'none';
+                currentImage = (currentImage + 1) % images.length;
+                images[currentImage].style.display = 'block';
+            }
+
+            setInterval(showNextImage, 5000); 
+        </script>
+
+
+<span style="margin:auto;">
+    <img src="/Users/nwakwokejuliet/Downloads/IMG_3232.PNG" alt="logo" style="max-width: 70px; max-height:70px;">
+        <!--<a href="#Create" target="_blank" class="button1"> Create </a> 
+        <a href="#login" target="_blank" class="button2"> Log in </a> -->
+        </span>
+      
+</head>
+<body class="w3-container" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 100%; color: white; background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/Users/nwakwokejuliet/Downloads/IMG_3234.JPG); background-repeat: no-repeat; background-size: cover;background-attachment:scroll;">
+
+    <header><h1 id="CloverReels" style="font-size: 2.5em; text-align: justify; max-width: 70%; margin-left: -100px; padding: 30px;"> Clover Reels</h1></header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 id="get" style="color: black; text-align: center; margin-top: -250px; margin-left: -100px; font-size: 1.25em; font-family: verdana; padding: 20px; width:500px; max-width: 100%;" > <a href="//Users/nwakwokejuliet/Desktop/prompt2.html"  style="border-radius: 50px; border: 1px solid white; background-color: rgb(77, 158, 119);" target="_blank" class="button">Get_Started </a></h3>
+    <br>
+    <br>
+    <br>
+</div>
+    
+<section class="hidden">
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align: center; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"> EXPLORE THE WORLD OF UNIMAGINABLE POSSIBILITIES</h2>
+    <br>
+    <p style="font-size: 1.35em; font-family:Arial, Helvetica, sans-serif;"> Discover unique stories like never before. Let your imagination run wild and prepare 
+        to be amazed. With unexpected twists and turns, our stories will keep you on the edge of your seat. Guess what? 
+        Our stories are global-you can read them anywhere.
+     </p>
+
+        <img src="/Users/nwakwokejuliet/Downloads/IMG_2304.WEBP" alt="cute" max-width="100%"width="480" height ="480"> &nbsp; <img src="/Users/nwakwokejuliet/Downloads/IMG_2196.PNG" alt="cute" max-width="100%"width="480" height ="480">
+
+    </section>
+    <section class="hideen">
+    <p style="font-size: 1.35em;"> Clover Reels offers a diverse collection of book series, novels, poems, short stories, African folktales, and more, etc.</p>
+       <img src="/Users/nwakwokejuliet/Downloads/IMG_3185.JPG" width="480" height="480" alt="cute"> &nbsp;   <img src="/Users/nwakwokejuliet/Downloads/IMG_3137.WEBP" width="480" height="480">
+    </section>
+    <section class="hidden">
+        
+       <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;">Get the chance to win amazing prizes as a user by engaging 
+    donating, and supporting your favorite writers. Comments and book ratings are valued, so keep 
+engaging! Active readers are recognized and rewarded every month with cash prizes, exclusive 
+access to their favorite books, and more.</p>
+        <img src="/Users/nwakwokejuliet/Downloads/Earn By Engaging!.PNG" alt="cute" width="480" height ="480"> &nbsp; <img src="/Users/nwakwokejuliet/Downloads/IMG_2241.JPG" alt="cute" width="480" height="480">
+    </section>
+    <section class="hidden">
+   
+       <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;"> With Clover Reels, authors and readers share a closer bond than ever. New 
+        writers are not left behind, they can connect with the right audience and grow their craft. 
+    </p>
+</section>
+<section class="hidden">
+
+    <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;"> Writers can earn on Clover Reels through ad revenues, donations, and exclusive competitions
+        hosted by clover reels. They can have the opportunity to monetize their works and negotiate the 
+        prices themselves. With Clover Reels, you are your own marketer and negotiator. </p>
+    </section>
+    <section class="hidden">
+      <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;"> As a writer, you can participate in competitions, share your book with a wide audience, and 
+        maximize engagement. The top three stories with the highest ratings and engagement, as determined by readers, will win 
+        exclusive prizes. Prizes are announced during each competition.
+    </p>
+    <img src="/Users/nwakwokejuliet/Downloads/Earn By Engaging! 2.PNG" width="480" height="480"> &nbsp; <img src="/Users/nwakwokejuliet/Downloads/Earn By Engaging!.png.PNG" width="480" height="480">
+</section>
+<section class="hidden">
+ 
+    <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;"> Videos aren't an exception! Writers also have the opportunity to transform 
+        their stories into AI-driven storytelling videos, which will be uploaded to our Youtube Channel. 
+        Depending on the agreement, revenue from these videos is shared between the company and the writer. 
+        To have your story converted into a video, you must apply and authorize its posting on Clover Reels' social
+        media pages. Video uploads are exclusive only.
+    </p>
+
+ 
+</section>
+</div>
+<section>
+    <p style="font-size: 1.35em; font-family: Arial, Helvetica, sans-serif;"> Join Clover Reels today to get started. </p> &nbsp;
+    <!--<a href="#" target="_blank" alt="join" style="font-size: 1.45em; border: 1px solid white; margin-left: 120px;"> JOIN </a>-->
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; text-align: center;"> Create An Account </button>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"  title="Close Modal"> &times; </span>
+        <form class="modal-content" action="/action_page.php"> 
+            <div class="container2">
+                <h1 style="color: black; font-family: Georgia;"> Sign Up </h1>
+                <p style="color: black; font-family: Georgia;"> Please fill in this form to create an account </p>
+                <hr>
+                <label for="email" style="color: black; font-family: Georgia;"> <b> Email </b> </label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label for="psw"  style="color: black; font-family: Georgia;"> <b> Password </b> </label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw-repeat"  style="color: black; font-family: Georgia;"> <b> Repeat Password </b> </label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <label  style="color: black; font-family: Georgia;">
+                    <input type="checkbox" checked="checked" name="remember" style="margin-buttom:15px"> Remember Me </label>
+
+                <p  style="color: black; font-family: Georgia;"> By creating an account you agree to our <a href="#" style="color: dodgerblue"> Terms & Privacy </a>. </p>
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"> Cancel </button>
+                    <button type="submit" class="signupbtn"> Sign Up </button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        //Get Modal
+        var modal= document.getElementsById('id01');
+        //when the user clicks anywhere outside of the modal, close it.
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display ="none";
+            }
+        }
+        </script>
+</section>
+<!--<div class="w3-row-padding">-->
+     <!--<h3 style="color: white;  text-align: center;"> <a href="https://www.url.com" target="_self">Get Started </a></h3>
+    &nbsp;<h3 style="color: white;  text-align: center;"> <a href="https://www.url.com" target="_parent">Get Started </a></h3> &nbsp;<h3 style="color: white; text-align: center; "> <a href="https://www.url.com" target="_top">Get Started </a></h3>-->
+<!--<p style="color: white; text-align: center; font-family: georgia; font-size: 1.85em;"><b> VIDEOS COMING SOON </b> </p>
+<a href="#" style="pointer-events: none;"target="_blank"  title="COMING SOON"><img class= "img1" src="/Users/nwakwokejuliet/Downloads/IMG_3230.WEBP", width="300cm", height="300cm"> </a> &nbsp; <a href="#" style="pointer-events: none;" target="_blank"  title="COMING SOON"><img class= "img1" src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg",  width="300cm", height="300cm"></a> &nbsp;
+<a href="#" style="pointer-events: none;"target="_blank"  title="COMING SOON"><img class= "img1" src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg", width="300cm", height="300cm"></a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="w3-third" id="List1">
+<h2 style="text-align: center; font-family: georgia;">Explore the stories</h2>
+<p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+    <img src="/Users/nwakwokejuliet/Downloads/IMG_3230.WEBP" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+    <p style="text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+    <a href="/Users/nwakwokejuliet/Downloads/Writeups.html" target="_blank" class="button" style="color: white;"> Read </a>
+    <br>
+    <br>
+    <br>
+    <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+    drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+She is faced with conflicts, fears and her trueself.</p>
+<a href="#everythingwasunreal" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+<p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+    earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+and focusing on her heartfelt mission.</p>
+<br>
+<a href="#angeloftheskies" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="w3-third" id="List1">
+<p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+    <img src="/Users/nwakwokejuliet/Downloads/photo-1544365558-35aa4afcf11f.webp" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+    <br>
+<a href="#theraidofmankind" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+    <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+    drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+She is faced with conflicts, fears and her trueself.</p>
+<br>
+<a href="#everythingwasunreal" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+
+<p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+    earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+and focusing on her heartfelt mission.</p>
+<br>
+<a href="#angeloftheskies" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+</div>
+<div class="w3-third" id="List1">
+<p style="font-family: georgia; font-size: 1.85em;"><strong> The Raid Of Mankind</strong></p>
+    <img src="/Users/nwakwokejuliet/Downloads/photo-1544365558-35aa4afcf11f.webp" alt="Raid of mainkind poster" style="float:right; max-width: 200px; max-height:200px; text-align: justify; right: 200px;">
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;">Raid of Mankind is a short storytime about a girl who goes on a quest in search of her family. She has three days to make a change. She has three days to make things right. </p>
+    <br>
+<a href="#raidofmankind" target="_blank" class="button" style="color: white"> Read </a>
+<br>
+<br>
+<br>
+    <p style="font-family: georgia; font-size: 1.85em;"><strong> Everything was unreal</strong></p>
+    <p style="text-align: justify; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/JULLIET.jpg" alt= "Everything was unreal poster" style="float: right; max-width:200px; max-height:200px; text-align: justify;"> A young girl struggles with
+    drug addiction and makes effort to get herself out of it. She struggles with a lifelong conflict between herself and what is meant to be.
+She is faced with conflicts, fears and her trueself.</p>
+<br>
+<a href="#everythingwasunreal" target="_blank" class="button"; style="color: white"> Read </a>
+<br>
+<br>
+<br>
+<p style="font-family: georgia; font-size: 1.85em;"><strong> Angel Of The Skies</strong></p>
+    <p style="text-align: justify; font-family: verdana; font-size: 0.875em;"> <img src="/Users/nwakwokejuliet/Downloads/png_20220709_130953_0000.jpg" alt= "Angel Of The Skies poster" style="float:right; max-width:200px; max-height:200px; text-align: justify;"> Sent to 
+    earth to be a source of joy for a barren woman, Irin battles with her inner conflict between falling in love
+and focusing on her heartfelt mission.</p>
+<br>
+<a href="#angeloftheskies" target="_blank" class="button"; style="color: white;"> Read </a>
+<br>
+<br>
+<br>
+</div>
+</div>
+<br>
+<br>
+<span style="width:100px; margin:auto;" class="w3-container"> <ul>
+    <li> <a href="#List1"> 1 </a></li>
+    <li><a href="novels" target="blank"> 2 </a></li>
+    <li><a href="media" target="blank"> 3 </a></li>
+    <li><a href="shorts" target="_blank"> 4 </a></li>
+    <li><a href="recommendations" target="_blank"> 5 </a></li>
+    <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> 6 </a> </li>
+    <li><a href="#about" target="_blank"> 7 </a></li>
+    <li><a href="#shortstories" target="_blank"> 8 </a></li>
+    <li><a href="#tutorial" target="_blank"> 9 </a> </li>
+    <li><a href="#Create" target="_blank"> 10 </a> </li>
+    <li><a href="#login" target="_blank"> 11 </a></li>
+    <li> <a href="#List1"> 12 </a></li>
+    <li><a href="novels" target="blank"> 13 </a></li>
+    <li><a href="media" target="blank"> 14 </a></li>
+    <li><a href="shorts" target="_blank"> 15 </a></li>
+    <li><a href="recommendations" target="_blank"> 16 </a></li>
+    <li><a href="/Users/nwakwokejuliet/Downloads/HTML Form.html" target="_blank"> 17 </a> </li>
+</ul> 
+</span>
+<br>
+<br>
+<br>
+<br>
+<p style="font-size: 12px; text-align: center;"><a href="/Users/nwakwokejuliet/Desktop/Clover reels Tables.html" target="_blank" id="BeGood"> Videos Available </a></p>
+</div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<style>
+    div.mycontainer {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+    }
+    div.mycontainer div {
+        width: 33%;
+        border: 2px solid black;
+        
+    }
+</style>
+<section>
+<h2 style="text-align: center;"> COUNTRIES IN PARTNERSHIP WITH US </h2>
+<div class="mycontainer">
+    <div style="background-color: teal; color: white; margin: auto; width: 300px;">
+    <h2 style="text-align: center;"> Nigeria </h2>
+    <p style="font-size: 12pt;"> With the growing incease of AI in Nigeri, Clover Reels gives Nigeria the 
+        opportunity to support writer and grow a strong collection of audience
+    </p>
+    </div>
+    <div style="background-color: teal; color: white; margin: auto; width: 300px;"> 
+    <h2 style="text-align: center;"> United States </h2>
+    <p style="font-size: 12pt;"> With the growing state of AI, united states have adopted the use of highly
+        sophisticated technologies in bringing about the existence of AI.
+    </p>
+    </div>
+    <div style="background-color: teal; color: white; margin: auto; width: 300px;">
+    <h2 style="text-align: center;"> United Kingdom</h2>
+    <p style="font-size: 12pt;"> With the high rate of AI taking over the world, the great queen herself has ordered
+        every country in partnership with London to make her a nice animation.
+    </p>
+    </div>
+</section>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>-->
+<!--<img src="/Users/nwakwokejuliet/Downloads/Surface Book - 1Gamart.png", alt="Alternate Site" usemap="#alternate"-->
+<!--<section>
+<div style="background-color:rgb(0, 48, 36); color: white;">
+<h2> Learn more</h2> <button onclick="myFunction()"> Reveal More </button> <button onclick="myFunction1()"> Hide </button> 
+<p class="learn1" style="font-size: 12px; font-family:Verdana, Geneva, Tahoma, sans-serif;"> 
+Clover Reels is a friendly and easy platform created for writers, creatives, videographers etc. It gives creatives
+the avenue to showcase their talents through writing, videography, audiobooks, whatever works for you. 
+<br>
+And guess what?!
+<br>
+Your work can easily be Monietized by us and you can also get supported by your readers. Regardless of whether you are new to writing or 
+not, grow your fan base, earn through ads, donations, contests, etc. 
+
+<br>
+<br>
+
+Readers and viewers are not left out. Keep your eyes on the look out because you can also earn by commenting and engaging
+with Authors post or videos. This way, you can encourage the authors and also build engagement. 
+<br>
+
+To learn more about Clover Reels, click on <a href="#" target="_blank" alt="About"><u> About</u></a></u>
+<br>
+
+Earn your part-time revenue by doing what you love using Clover Reels Today.
+
+</p>
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementsByClassName("learn1");
+        for (var i =10; i > x.length; i++) {
+            x[i].style.display="learn1";
+
+        }
+    }
+    function myFunction1() {
+        var x = document.getElementsByClassName("learn1");
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display="none";
+        }
+    }
+    </script>
+    </div>
+
+<h2 style="background-color: rgb(0, 0, 0);"> Learn more</h2>
+<h2 style="background-color: rgb(208, 0, 203);"> Learn more</h2>
+<h2 style="background-color: hsl(300, 76%, 90%);"> Hey!</h2>
+<h2 style="background-color: rgb(59, 99, 50);"> Learn more</h2>
+<h2 style="background-color: rgb(255, 255, 170);"> Learn more</h2>
+<h2 style="background-color: rgb(255, 190, 255);"> Learn more</h2>
+<h2 style="background-color: rgb(255, 186, 2);"> Learn more</h2>
+<h2 style="background-color: #ff6780;"> What if i have less?</h2>
+<h1 style="background-color: hsl(9, 100%, 64%);"> Be good </h1>
+<a href="#CloverReels"> Jump to Home</a>-->
+<!--<a href="/Users/nwakwokejuliet/Desktop/Project Reference/DOCTYPE html.html#Antimalware Scan"> Next Page</a>-->
+<!--<a href="/Users/nwakwokejuliet/Desktop/Clover reels Tables.html/#CloverTables"> Videos Available </a>-->
+<!--</section>
+-->    
+
+<br>
+<br>
+<br>
+
+ <section>
+<hr>
+<address> Made by Clover Reels Management Team 
+   Follow us on Youtube Clover Reels 
+    &copy; 2025
+   Nigeria
+   <br>
+    For more enquiries, send an email to:<a href="mailto:cloverreels@gmail.com"><u>This email</u></a>
+    </address>
+    </section>
